@@ -1,0 +1,6 @@
+# SHA-256 checksums of the three PyTorch checkpoints from the reviewed legacy snapshot.
+# Verify after copying the weights into models/weights/.
+
+aae4b0064323a639c978aec9f5acfce228eed6a501ca262ec2ed51be18f73f15  models/weights/yolo11m.pt
+d7d379cb739c4a88178bfdbf3aa29888da6dc69e29140023129d22de7152a1f1  models/weights/segformer.pt
+7ba69ea7a6bb0d33e501980b7cdd64ecdab80808842d03efa3e2c2b5296eb1f3  models/weights/yoloOCR.pt
