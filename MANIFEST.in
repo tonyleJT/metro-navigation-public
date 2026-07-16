@@ -1,0 +1,7 @@
+include CHANGELOG.md
+include CITATION.cff
+include CODE_REVIEW_REPORT.md
+include CONTRIBUTING.md
+include LICENSING.md
+include REPRODUCIBILITY.md
+recursive-include models *.md *.txt .gitkeep

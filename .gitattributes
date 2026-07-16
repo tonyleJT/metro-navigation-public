@@ -1,0 +1,12 @@
+# Store model binaries with Git LFS rather than ordinary Git history.
+*.pt filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.engine filter=lfs diff=lfs merge=lfs -text
+*.trt filter=lfs diff=lfs merge=lfs -text
+
+# Normalize source and documentation line endings.
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf

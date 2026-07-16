@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "metro-navigation-assistive"
+version = "0.1.0"
+description = "Phase-aware computer-vision metro navigation research prototype for visually impaired users"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+authors = [
+  { name = "Anh-Tuan Le", email = "anhtuan.cyan0103@gmail.com" },
+  { name = "Viet-Cuong Pham", email = "pvcuong@hcmut.edu.vn" },
+]
+keywords = [
+  "assistive navigation",
+  "computer vision",
+  "semantic segmentation",
+  "YOLO11",
+  "SegFormer",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24,<3",
+  "opencv-python>=4.8,<5",
+  "pyttsx3>=2.90,<3",
+  "torch>=2.1,<3",
+  "transformers>=4.36,<5",
+  "ultralytics>=8.3,<9",
+]
+
+[project.urls]
+Repository = "https://github.com/tonyleJT/metro-navigation-public"
+Issues = "https://github.com/tonyleJT/metro-navigation-public/issues"
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.15,<2",
+  "pytest>=8,<10",
+  "ruff>=0.15,<1",
+]
+
+[project.scripts]
+metro-nav = "metro_navigation.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+metro_navigation = ["py.typed"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+extend-exclude = ["models/weights", "outputs"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP", "SIM", "C4", "RUF"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.10"
+check_untyped_defs = true
+ignore_missing_imports = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_configs = true

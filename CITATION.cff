@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Computer Vision Based Navigation System for Visually Impaired People in Metro Station"
+message: "If you use this software, please cite the conference paper."
+type: software
+authors:
+  - family-names: Le
+    given-names: Anh-Tuan
+    email: anhtuan.cyan0103@gmail.com
+  - family-names: Pham
+    given-names: Viet-Cuong
+    email: pvcuong@hcmut.edu.vn
+version: 0.1.0
+repository-code: "https://github.com/tonyleJT/metro-navigation-public"
+preferred-citation:
+  type: conference-paper
+  title: "Computer Vision Based Navigation System for Visually Impaired People in Metro Station"
+  authors:
+    - family-names: Le
+      given-names: Anh-Tuan
+    - family-names: Pham
+      given-names: Viet-Cuong
+  year: 2026
+  conference:
+    name: "2026 11th International Conference on Applying New Technology in Green Buildings (ATiGB)"
