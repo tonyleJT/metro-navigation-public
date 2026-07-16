@@ -62,7 +62,16 @@ metro_navigation = ["py.typed"]
 [tool.ruff]
 target-version = "py310"
 line-length = 100
-extend-exclude = ["models/weights", "outputs", "draft"]
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "draft",
+    "outputs",
+    "models/weights",
+]
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I", "B", "UP", "SIM", "C4", "RUF"]
